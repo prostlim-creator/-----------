@@ -1,39 +1,324 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
   <title>кусика</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <!-- Котики на заднем фоне -->
-<div class="cats-container">
-  <!-- Котик 1 -->
-  <svg class="cat" viewBox="0 0 100 100" fill="none" stroke="#00eaff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color:#00eaff">
-    <path d="M30 40 L20 15 L38 32"/>
-    <path d="M70 40 L80 15 L62 32"/>
-    <circle cx="50" cy="55" r="28"/>
-    <circle cx="42" cy="52" r="1.5" fill="#00eaff"/>
-    <circle cx="58" cy="52" r="1.5" fill="#00eaff"/>
-    <path d="M45 65 Q50 70 55 65"/>
-  </svg>
- 
-  <!-- Котик 2 -->
-  <svg class="cat" viewBox="0 0 100 100" fill="none" stroke="#00eaff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color:#00eaff">
-    <path d="M30 40 L20 15 L38 32"/>
-    <path d="M70 40 L80 15 L62 32"/>
-    <circle cx="50" cy="55" r="28"/>
-    <circle cx="42" cy="52" r="1.5" fill="#00eaff"/>
-    <circle cx="58" cy="52" r="1.5" fill="#00eaff"/>
-    <path d="M45 65 Q50 70 55 65"/>
-  </svg>
- 
-  <!-- Котик 3 -->
-  <svg class="cat" viewBox="0 0 100 100" fill="none" stroke="#00eaff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color:#00eaff">
-    <path d="M30 40 L20 15 L38 32"/>
-    <path d="M70 40 L80 15 L62 32"/>
+  <audio id="backgroundMusic" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает воспроизведение аудио.
+  </audio>
+
+  <div class="cats-container" aria-hidden="true">
+    <svg class="cat cat-1" viewBox="0 0 100 100" fill="none" stroke="#00eaff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M30 40 L20 15 L38 32"/>
+      <path d="M70 40 L80 15 L62 32"/>
+      <circle cx="50" cy="55" r="28"/>
+      <circle cx="42" cy="52" r="1.5" fill="#00eaff"/>
+      <circle cx="58" cy="52" r="1.5" fill="#00eaff"/>
+      <path d="M45 65 Q50 70 55 65"/>
+    </svg>
+
+    <svg class="cat cat-2" viewBox="0 0 100 100" fill="none" stroke="#00eaff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M30 40 L20 15 L38 32"/>
+      <path d="M70 40 L80 15 L62 32"/>
+      <circle cx="50" cy="55" r="28"/>
+      <circle cx="42" cy="52" r="1.5" fill="#00eaff"/>
+      <circle cx="58" cy="52" r="1.5" fill="#00eaff"/>
+      <path d="M45 65 Q50 70 55 65"/>
+    </svg>
+
+    <svg class="cat cat-3" viewBox="0 0 100 100" fill="none" stroke="#00eaff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M30 40 L20 15 L38 32"/>
+      <path d="M70 40 L80 15 L62 32"/>
+      <circle cx="50" cy="55" r="28"/>
+      <circle cx="42" cy="52" r="1.5" fill="#00eaff"/>
+      <circle cx="58" cy="52" r="1.5" fill="#00eaff"/>
+      <path d="M45 65 Q50 70 55 65"/>
+    </svg>
+
+    <svg class="cat cat-4" viewBox="0 0 100 100" fill="none" stroke="#00eaff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M30 40 L20 15 L38 32"/>
+      <path d="M70 40 L80 15 L62 32"/>
+      <circle cx="50" cy="55" r="28"/>
+      <circle cx="42" cy="52" r="1.5" fill="#00eaff"/>
+      <circle cx="58" cy="52" r="1.5" fill="#00eaff"/>
+      <path d="M45 65 Q50 70 55 65"/>
+    </svg>
+
+    <svg class="cat cat-5" viewBox="0 0 100 100" fill="none" stroke="#00eaff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M30 40 L20 15 L38 32"/>
+      <path d="M70 40 L80 15 L62 32"/>
+      <circle cx="50" cy="55" r="28"/>
+      <circle cx="42" cy="52" r="1.5" fill="#00eaff"/>
+      <circle cx="58" cy="52" r="1.5" fill="#00eaff"/>
+      <path d="M45 65 Q50 70 55 65"/>
+    </svg>
+
+    <svg class="cat cat-6" viewBox="0 0 100 100" fill="none" stroke="#00eaff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M30 40 L20 15 L38 32"/>
+      <path d="M70 40 L80 15 L62 32"/>
+      <circle cx="50" cy="55" r="28"/>
+      <circle cx="42" cy="52" r="1.5" fill="#00eaff"/>
+      <circle cx="58" cy="52" r="1.5" fill="#00eaff"/>
+      <path d="M45 65 Q50 70 55 65"/>
+    </svg>
+  </div>
+
+  <main class="page-content">
+    <button id="myBtn" class="main-btn" type="button">
+      ня
+    </button>
+  </main>
+
+  <div
+    class="modal"
+    id="modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+    aria-hidden="true"
+  >
+    <div class="modal-content">
+      <button
+        class="close"
+        id="closeBtn"
+        type="button"
+        aria-label="Закрыть окно"
+      >
+        &times;
+      </button>
+
+      <h2 id="modalTitle">Кусика</h2>
+
+      <p id="modalText">
+        Покажи письку ❤️
+      </p>
+
+      <div class="modal-buttons" id="modalButtons">
+        <button class="modal-btn yes-btn" id="yesBtn" type="button">
+          иду делать фото
+        </button>
+
+        <button class="modal-btn no-btn" id="noBtn" type="button">
+          нет
+        </button>
+      </div>
+
+      <div class="dance-cat-wrap" id="danceCat" hidden>
+        <img
+          class="dance-cat"
+          src="https://i.pinimg.com/originals/88/14/9b/88149b0400750578f4d07d9bc3fb0fee.gif"
+          alt="Прыгающий котик"
+        >
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const mainButton = document.getElementById("myBtn" );
+    const modal = document.getElementById("modal");
+    const closeButton = document.getElementById("closeBtn");
+    const modalText = document.getElementById("modalText");
+    const modalButtons = document.getElementById("modalButtons");
+    const danceCat = document.getElementById("danceCat");
+    const yesButton = document.getElementById("yesBtn");
+    const noButton = document.getElementById("noBtn");
+    const backgroundMusic = document.getElementById("backgroundMusic");
+
+    let noButtonIsOutside = false;
+
+    function openModal() {
+      modal.classList.add("show");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+
+      setTimeout(() => {
+        yesButton.focus();
+      }, 100);
+    }
+
+    function closeModal() {
+      modal.classList.remove("show");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+
+      backgroundMusic.pause();
+      backgroundMusic.currentTime = 0;
+
+      resetModal();
+      mainButton.focus();
+    }
+
+    function resetModal() {
+      modalText.hidden = false;
+      modalButtons.hidden = false;
+      danceCat.hidden = true;
+
+      if (noButtonIsOutside) {
+        modalButtons.appendChild(noButton);
+      }
+
+      noButtonIsOutside = false;
+
+      noButton.classList.remove("escaping");
+      noButton.style.position = "";
+      noButton.style.left = "";
+      noButton.style.top = "";
+      noButton.style.zIndex = "";
+    }
+
+    function showDancingCat() {
+      modalText.hidden = true;
+      modalButtons.hidden = true;
+      danceCat.hidden = false;
+
+      backgroundMusic.currentTime = 0;
+
+      const musicPromise = backgroundMusic.play();
+
+      if (musicPromise !== undefined) {
+        musicPromise.catch(() => {
+          console.warn("Не удалось запустить музыку.");
+        });
+      }
+    }
+
+    function moveNoButton(event) {
+      if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+
+      if (!noButtonIsOutside) {
+        document.body.appendChild(noButton);
+        noButtonIsOutside = true;
+      }
+
+      const buttonRect = noButton.getBoundingClientRect();
+      const screenPadding = 12;
+
+      const minX = screenPadding;
+      const minY = screenPadding;
+
+      const maxX = Math.max(
+        minX,
+        window.innerWidth - buttonRect.width - screenPadding
+      );
+
+      const maxY = Math.max(
+        minY,
+        window.innerHeight - buttonRect.height - screenPadding
+      );
+
+      let newX = minX;
+      let newY = minY;
+
+      for (let attempt = 0; attempt < 30; attempt++) {
+        const candidateX =
+          minX + Math.random() * Math.max(0, maxX - minX);
+
+        const candidateY =
+          minY + Math.random() * Math.max(0, maxY - minY);
+
+        const distance = Math.sqrt(
+          Math.pow(candidateX - buttonRect.left, 2) +
+          Math.pow(candidateY - buttonRect.top, 2)
+        );
+
+        if (distance > 100 || attempt === 29) {
+          newX = candidateX;
+          newY = candidateY;
+          break;
+        }
+      }
+
+      noButton.classList.add("escaping");
+      noButton.style.position = "fixed";
+      noButton.style.left = `${newX}px`;
+      noButton.style.top = `${newY}px`;
+      noButton.style.zIndex = "3000";
+    }
+
+    mainButton.addEventListener("click", openModal);
+
+    closeButton.addEventListener("click", closeModal);
+
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+
+    yesButton.addEventListener("click", showDancingCat);
+
+    noButton.addEventListener("mouseenter", moveNoButton);
+
+    noButton.addEventListener("touchstart", moveNoButton, {
+      passive: false
+    });
+
+    noButton.addEventListener("pointerdown", (event) => {
+      if (
+        event.pointerType === "touch" ||
+        event.pointerType === "pen"
+      ) {
+        moveNoButton(event);
+      }
+    });
+
+    noButton.addEventListener("click", moveNoButton);
+
+    window.addEventListener("resize", () => {
+      if (!noButtonIsOutside) {
+        return;
+      }
+
+      const buttonRect = noButton.getBoundingClientRect();
+      const screenPadding = 12;
+
+      const maxX = Math.max(
+        screenPadding,
+        window.innerWidth - buttonRect.width - screenPadding
+      );
+
+      const maxY = Math.max(
+        screenPadding,
+        window.innerHeight - buttonRect.height - screenPadding
+      );
+
+      const safeX = Math.min(
+        Math.max(buttonRect.left, screenPadding),
+        maxX
+      );
+
+      const safeY = Math.min(
+        Math.max(buttonRect.top, screenPadding),
+        maxY
+      );
+
+      noButton.style.left = `${safeX}px`;
+      noButton.style.top = `${safeY}px`;
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (
+        event.key === "Escape" &&
+        modal.classList.contains("show")
+      ) {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
     <circle cx="50" cy="55" r="28"/>
     <circle cx="42" cy="52" r="1.5" fill="#00eaff"/>
     <circle cx="58" cy="52" r="1.5" fill="#00eaff"/>
