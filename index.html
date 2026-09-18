@@ -123,17 +123,42 @@
     <line x1="65" y1="66" x2="85" y2="68" stroke="#2d3436" stroke-width="1.5"/>
   </svg>
 </div>
+  <!-- Кнопка -->
+  <button id="myBtn" type="button" class="btn">ня</button>
 
-<button id="myBtn" type="button" class="btn">
-  <p>ня</p>
-</button>
+  <!-- Модальное окно (должно быть ПЕРЕД скриптом) -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" id="closeBtn">&times;</span>
+      
+      Покажи письку ❤️
+    </div>
+  </div>
+
+  <!-- Скрипт всегда в самом конце -->
   <script>
-
     const btn = document.getElementById("myBtn");
+    const modal = document.getElementById("modal");
+    const closeBtn = document.getElementById("closeBtn");
 
-  btn.addEventListener("click", function() {
-    alert("Покажи письку ❤️");
-  });
+    // Открыть окно
+    btn.addEventListener("click", () => {
+      modal.classList.add("show");
+    });
+
+    // Закрыть по крестику
+    closeBtn.addEventListener("click", () => {
+      modal.classList.remove("show");
+    });
+
+    // Закрыть при клике на тёмный фон
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.remove("show");
+      }
+    });
   </script>
+</body>
+</html>
 </body>
 </html>
